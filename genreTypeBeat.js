@@ -34,3 +34,10 @@ function testChords(lastChord){
 
 
 }
+
+
+window.onkeypress = function(wey){
+    if(wey.keyCode >= 0 || wey.keyCode <= 100){
+        document.querySelector("h2").style.visibility = "hidden";
+    }
+}
