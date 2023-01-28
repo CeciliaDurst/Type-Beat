@@ -1,9 +1,9 @@
 //Determine what genre that beat was like!
-chord1 = 0;
-chord2 = 0;
-chord3 = 0;
-chord4 = 0;
-
+let chord1 = 0;
+let chord2 = 0;
+let chord3 = 0;
+let chord4 = 0;
+let boolz = true;
 function testChords(lastChord){
     if(chord1 === 0){
         chord1 = lastChord;
@@ -25,4 +25,11 @@ function testChords(lastChord){
     }
 
 
+}
+
+
+window.onkeypress = function(wey){
+    if(wey.keyCode >= 0 || wey.keyCode <= 100){
+        document.querySelector("h2").style.visibility = "hidden";
+    }
 }
