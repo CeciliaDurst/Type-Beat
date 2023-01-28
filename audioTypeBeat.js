@@ -111,44 +111,58 @@ function playChord(name){
 window.onkeydown = function(key){
     if(key.keyCode === 65 || key.keyCode === 90){
         playChord("C maj");
+        testChords(1); 
     }
     else if(key.keyCode === 66 || key.keyCode === 89){
         playChord("C maj 7");
+        testChords(1);
     }
     else if(key.keyCode === 67 || key.keyCode === 88){
         playChord("D min");
+        testChords(2);
     }
     else if(key.keyCode === 68 || key.keyCode === 87){
         playChord("D min 7");
+        testChords(2);
     }
     else if(key.keyCode === 69 || key.keyCode === 86){
         playChord("E min");
+        testChords(3);
     }
     else if(key.keyCode === 70 || key.keyCode === 85){
         playChord("E min 7");
+        testChords(3);
     }
     else if(key.keyCode === 71 || key.keyCode === 84){
         playChord("F maj");
+        testChords(4);
     }
     else if(key.keyCode === 72 || key.keyCode === 83){
         playChord("F maj 7");
+        testChords(4);
     }
     else if(key.keyCode === 73 || key.keyCode === 82){
         playChord("G maj");
+        testChords(5);
     }
     else if(key.keyCode === 74 || key.keyCode === 81){
         playChord("G maj 7");
+        testChords(5);
     }
     else if(key.keyCode === 75 || key.keyCode === 80){
         playChord("A min");
+        testChords(6);
     }
     else if(key.keyCode === 76 || key.keyCode === 79){
         playChord("A min 7");
+        testChords(6);
     }
     else if(key.keyCode === 77){
         playChord("B dim");
+        testChords(7);
     }
     else{
         playChord("B min 7");
+        testChords(7);
     }
 };
