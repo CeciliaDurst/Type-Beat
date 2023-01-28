@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
 body {
-	background: linear-gradient(-90deg, #fca47c, #ffc477, #73b2ff, #7489ff);
+	background: linear-gradient(-45deg, #6b9fff, #7797ff, #b473ff, #cc74ff);
 	background-size: 400% 400%;
 	animation: gradient 10s ease-in-out infinite;
 	height: 100vh;
