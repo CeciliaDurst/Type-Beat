@@ -7,7 +7,7 @@ chord1 = 0;
 chord2 = 0;
 chord3 = 0;
 chord4 = 0;
-genre = "";
+genre = "empty";
 
 //Hardcoded dataset because I am running out of time :,/
 d1 = ["6","4","1","5","Alternative"];
@@ -67,7 +67,14 @@ function testChords(lastChord){
     else if(chord4 === 0){
         chord4 = lastChord;
         genre = testGenre(chord1, chord2, chord3, chord4);
-        document.querySelector("title").innerHTML = genre;
+        if(genre != undefined) {
+            document.querySelector("title").innerHTML = genre;
+            document.querySelector("h3").innerHTML = genre + " type beat";
+        }
+        else {
+            document.querySelector("title").innerHTML = "Try another beat!";
+            document.querySelector("h3").innerHTML = "Try another beat!";
+        }
     }
     else {
         chord1 = chord2;
@@ -76,7 +83,14 @@ function testChords(lastChord){
         chord4 = lastChord;
         
         genre = testGenre(chord1, chord2, chord3, chord4);
-        document.querySelector("title").innerHTML = genre;
+        if(genre != undefined) {
+            document.querySelector("title").innerHTML = genre;
+            document.querySelector("h3").innerHTML = genre + " type beat";
+        }
+        else {
+            document.querySelector("title").innerHTML = "Try another beat!";
+            document.querySelector("h3").innerHTML = "Try another beat!";
+        }
     }
     
 
