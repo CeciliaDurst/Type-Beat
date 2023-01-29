@@ -7,7 +7,7 @@ chord1 = 0;
 chord2 = 0;
 chord3 = 0;
 chord4 = 0;
-genre = "empty";
+genre = "";
 
 //Hardcoded dataset because I am running out of time :,/
 d1 = ["6","4","1","5","Alternative"];
@@ -48,6 +48,7 @@ function testGenre(ch1, ch2, ch3, ch4){
             ch2 = 0;
             ch3 = 0;
             ch4 = 0;
+            return genre;
             }
         }
 }
@@ -65,7 +66,8 @@ function testChords(lastChord){
     }
     else if(chord4 === 0){
         chord4 = lastChord;
-        testGenre(chord1, chord2, chord3, chord4);
+        genre = testGenre(chord1, chord2, chord3, chord4);
+        document.querySelector("title").innerHTML = genre;
     }
     else {
         chord1 = chord2;
@@ -73,8 +75,10 @@ function testChords(lastChord){
         chord3 = chord4;
         chord4 = lastChord;
         
-        testGenre(chord1, chord2, chord3, chord4);
+        genre = testGenre(chord1, chord2, chord3, chord4);
+        document.querySelector("title").innerHTML = genre;
     }
+    
 
 }
 
