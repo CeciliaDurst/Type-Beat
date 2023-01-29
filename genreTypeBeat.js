@@ -52,6 +52,10 @@ function testGenre(ch1, ch2, ch3, ch4){
         }
 }
 
+function getGenre(){
+    return genre;
+}
+
 
 function testChords(lastChord){
     if(chord1 === 0){
