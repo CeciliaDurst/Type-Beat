@@ -52,9 +52,6 @@ function testGenre(ch1, ch2, ch3, ch4){
         }
 }
 
-function getGenre(){
-    return genre;
-}
 
 
 function testChords(lastChord){
@@ -86,5 +83,6 @@ function testChords(lastChord){
 window.onkeypress = function(wey){
     if(wey.keyCode >= 0 || wey.keyCode <= 100){
         document.querySelector("h2").style.visibility = "hidden";
+
     }
 }
