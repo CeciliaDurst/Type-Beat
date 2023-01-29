@@ -70,7 +70,11 @@ function testChords(lastChord){
         genre = testGenre(chord1, chord2, chord3, chord4);
         if(genre != undefined) {
             document.querySelector("title").innerHTML = genre;
-            document.querySelector("h3").innerHTML = genre + " type beat";
+            
+            document.getElementById("bigTitle").innerHTML = genre + " type beat";
+            document.querySelector("h3").innerHTML = "Sequence recognized!";
+            document.querySelector("h4").style.visibility = "visible";
+            document.querySelector("h4").innerHTML = "You discovered a " + genre + " melody";
             chord1 = 0;
             chord2 = 0;
             chord3 = 0;
@@ -94,7 +98,11 @@ function testChords(lastChord){
         genre = testGenre(chord1, chord2, chord3, chord4);
         if(genre != undefined) {
             document.querySelector("title").innerHTML = genre;
-            document.querySelector("h3").innerHTML = genre + " type beat";
+            document.getElementById("bigTitle").innerHTML = genre + " type beat";
+            document.querySelector("h3").innerHTML = "Sequence recognized!";
+            document.querySelector("h4").style.visibility = "visible";
+            document.querySelector("h4").innerHTML = "You discovered a " + genre + " melody";
+
             chord1 = 0;
             chord2 = 0;
             chord3 = 0;
