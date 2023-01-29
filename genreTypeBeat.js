@@ -74,7 +74,7 @@ function testChords(lastChord){
             document.getElementById("bigTitle").innerHTML = genre + " type beat";
             document.querySelector("h3").innerHTML = "Sequence recognized!";
             document.querySelector("h4").style.visibility = "visible";
-            document.querySelector("h4").innerHTML = "You discovered a " + genre + " melody";
+            document.querySelector("h4").innerHTML = "You discovered the " + genre + " melody";
             chord1 = 0;
             chord2 = 0;
             chord3 = 0;
@@ -101,7 +101,7 @@ function testChords(lastChord){
             document.getElementById("bigTitle").innerHTML = genre + " type beat";
             document.querySelector("h3").innerHTML = "Sequence recognized!";
             document.querySelector("h4").style.visibility = "visible";
-            document.querySelector("h4").innerHTML = "You discovered a " + genre + " melody";
+            document.querySelector("h4").innerHTML = "You discovered the " + genre + " melody";
 
             chord1 = 0;
             chord2 = 0;
