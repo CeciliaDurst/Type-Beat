@@ -111,7 +111,7 @@ function playChord(name){
 window.onkeydown = function(key){
     if(key.keyCode === 65 || key.keyCode === 90){
         playChord("C maj");
-        testChords(1); 
+        testChords(1);  
     }
     else if(key.keyCode === 66 || key.keyCode === 89){
         playChord("C maj 7");
