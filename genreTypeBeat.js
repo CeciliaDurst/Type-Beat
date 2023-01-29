@@ -38,7 +38,7 @@ d25 = ["1","4","1","4","Wildside"];
 d26 = ["1","1","5","7","Moody"];
 d27 = ["2","1","7","6","Moody"];
 
-var data = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27];
+let data = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23, d24, d25, d26, d27];
 
 function testGenre(ch1, ch2, ch3, ch4){
     for(let i = 0; i < data.length; i ++){
@@ -48,6 +48,7 @@ function testGenre(ch1, ch2, ch3, ch4){
             ch2 = 0;
             ch3 = 0;
             ch4 = 0;
+            return genre;
             }
         }
 }
@@ -66,7 +67,23 @@ function testChords(lastChord){
     }
     else if(chord4 === 0){
         chord4 = lastChord;
-        testGenre(chord1, chord2, chord3, chord4);
+        genre = testGenre(chord1, chord2, chord3, chord4);
+        if(genre != undefined) {
+            document.querySelector("title").innerHTML = genre;
+            document.querySelector("h3").innerHTML = genre + " type beat";
+            chord1 = 0;
+            chord2 = 0;
+            chord3 = 0;
+            chord4 = 0;
+        }
+        else if (genre == undefined) {
+            document.querySelector("title").innerHTML = "Try another beat!";
+            document.querySelector("h3").innerHTML = "Try another beat!";
+        }
+        else {
+            document.querySelector("title").innerHTML = "processing...";
+            document.querySelector("h3").innerHTML = "processing...";
+        }
     }
     else {
         chord1 = chord2;
@@ -74,8 +91,28 @@ function testChords(lastChord){
         chord3 = chord4;
         chord4 = lastChord;
         
-        testGenre(chord1, chord2, chord3, chord4);
+        genre = testGenre(chord1, chord2, chord3, chord4);
+        if(genre != undefined) {
+            document.querySelector("title").innerHTML = genre;
+            document.querySelector("h3").innerHTML = genre + " type beat";
+            chord1 = 0;
+            chord2 = 0;
+            chord3 = 0;
+            chord4 = 0;
+        }
+        else if (genre == undefined) {
+            document.querySelector("title").innerHTML = "Try another beat!";
+            document.querySelector("h3").innerHTML = "Try another beat!";
+
+        }
+        else {
+            document.querySelector("title").innerHTML = "processing...";
+            document.querySelector("h3").innerHTML = "processing...";
+        }
+
     }
+
+    
 
 }
 
@@ -83,6 +120,6 @@ function testChords(lastChord){
 window.onkeypress = function(wey){
     if(wey.keyCode >= 0 || wey.keyCode <= 100){
         document.querySelector("h2").style.visibility = "hidden";
-
+        document.querySelector("h3").style.visibility = "visible";
     }
 }

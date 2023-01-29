@@ -33,3 +33,12 @@ h2 {
 	margin-top: 20%;
 
 }
+h3 {
+	font-family: "Plus Jakarta Display", sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 20%;
+	visibility: hidden;
+
+}
